@@ -14,19 +14,39 @@
             <div class="logo p-2 w-1/6">
                 <img src="img/logo.png" width="100" alt="logo Super Mario Bros">
             </div>
+
             <div class="links lg:block hidden w-1/6 md:w-4/6 ">
                 <ul class="menu flex items-center justify-center gap-5">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Play Together</a></li>
-                    <li><a href="">Explore</a></li>
-                    <li><a href="">Bowser Fury</a></li>
-                    <li><a href="">Buy Now</a></li>
+                    <li><a href="#" class="link" >Home</a></li>
+                    <li><a href="#" class="link" >Play Together</a></li>
+                    <li><a href="#" class="link" >Explore</a></li>
+                    <li><a href="#" class="link2" >Bowser Fury</a></li>
+                    <li><a href="#" class="link3" >Buy Now</a></li>
                 </ul>
-
             </div>
+
+            <div class="block lg:hidden w-1/6 lg:w-4/6 ">
+                <a href="#" class="link" id="mobile-menu" >Menu</a>
+                <ul class="mobile-links hidden w-full absolute z-50 left-0 text-center bg-gray-800 ">
+                    <li><a href="#" class="link" >Home</a></li>
+                    <li><a href="#" class="link" >Play Together</a></li>
+                    <li><a href="#" class="link" >Explore</a></li>
+                    <li><a href="#" class="link2" >Bowser Fury</a></li>
+                    <li><a href="#" class="link3" >Buy Now</a></li>
+                </ul>
+            </div>
+            
 
         </nav>
     </div>
+
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelector('.mobile-links');
+        mobileMenu.addEventListener('click', () => {
+            mobileLinks.classList.toggle('hidden');
+        });
+    </script>
 
 </body>
 
